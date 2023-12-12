@@ -24,11 +24,17 @@ public class Order {
     @ApiModelProperty(value = "订单名称")
     private String orderName;
 
-    @ApiModelProperty(value = "景点id")
-    private Long attractionsId;
+    @ApiModelProperty(value = "预定时间段")
+    private String timePeriod;
 
-    @ApiModelProperty(value = "人数")
-    private Integer participants;
+    @ApiModelProperty(value = "景点id")
+    private Long scenicSpotsId;
+
+    @ApiModelProperty(value = "成人数")
+    private Integer adult;
+
+    @ApiModelProperty(value = "儿童数")
+    private Integer child;
 
     @ApiModelProperty(value = "出行日期")
     private Date travelDate;
@@ -46,7 +52,7 @@ public class Order {
     private String contacts;
 
     @ApiModelProperty(value = "联系人手机号")
-    private String contactsPhoneNumber;
+    private String contactsPhone;
 
     @ApiModelProperty(value = "订单状态0:未支付;1:已支付")
     private Integer status;
