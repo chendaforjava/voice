@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.season.voice.mapper.HomePageMapper">
 
-    <select id="homePageInfo" resultType="com.season.voice.dto.HomePageDTO">
+    <select id="homePageInfo" resultType="com.season.voice.dto.HomePageDetailDTO">
         select
                 a.id,a.title,b.city_code,b.city_name,c.province_name as province,a.pic_url,a.introduction
         from home_page a,city b,province c
