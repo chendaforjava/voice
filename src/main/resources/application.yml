@@ -1,0 +1,55 @@
+server:
+  port: 8720
+  servlet:
+    context-path: /voiceSeason
+spring:
+  application:
+    name: your-application-name
+  servlet:
+    multipart:
+      max-file-size: 50MB
+  datasource:
+    url: jdbc:mysql://39.99.237.186:3306/voiceSeason?useSSL=false&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&allowMultiQueries=true
+    username: root
+    password: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  # 扫描 mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  configuration:
+    jdbc-type-for-null: 'null'
+
+oss:
+  endpoint: oss-cn-guangzhou.aliyuncs.com
+  accessKeyId: LTAI5tDvuvkmEG3Snj1Ev1Lv
+  accessKeySecret: 39GbWRVeHuj4EIkG9gD0vrCuwsJ4nh
+  bucketName: chendabucket
+  downloadFileUrl: https://chendabucket.oss-cn-guangzhou.aliyuncs.com
+  systemName: chenda
+  enable: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+
+swagger:
+  enabled: true
+  title: 季之音API
+  basePackage: com.season.voice.controller
+  version: 1.0
+  prefix: /api/voice
+
+wx:
+  #微信关联的小程序的appid
+  appId: wxd678efh567hg6787
+  #微信支付商户号
+  mchId: 1230000109
+  #微信支付证书序列号
+  certificateSerialNo: xxxxxx
+  #微信支付apiv3的密钥
+  apiKey: xxxxx
+  #微信支付回调商户线上地址api
+  notifyUrl: https://xxxxx/pay/callback
+  #微信支付私钥
+  privateKeyPath: /app/privateKey.pem
